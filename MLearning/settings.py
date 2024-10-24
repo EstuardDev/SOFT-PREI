@@ -26,19 +26,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 #Deploy
-DEBUG = config("DEBUG",cast=bool)
+DEBUG = config("DEBUG", cast=bool, default=False) if 'RENDER' not in os.environ else False
+
 AGE=config
 ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
 
 #Deploy
-DEBUG = 'RENDER' not in os.environ
+# DEBUG = 'RENDER' not in os.environ
 
 #Deploy
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -143,7 +144,8 @@ USE_TZ = True
 LOGIN_URL = 'login'
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+# https://docs.djangoproject.com/e
+# n/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
 
