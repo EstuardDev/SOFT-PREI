@@ -22,7 +22,8 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
 
   <!-- DataTables (libreria para tablas) -->
-  <link rel="stylesheet" href="{% static 'assets/dist/lib/DataTables/datatables.min.css' %}" />   
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-2.1.8/b-3.1.2/b-html5-3.1.2/datatables.css">
 
   <!-- Date Range Picker (libreria para reportes) -->
   <link rel="stylesheet" href="{% static 'assets/dist/lib/daterangepicker-master/daterangepicker.css' %}" />
@@ -273,7 +274,10 @@
   <!-- jQuery (necesario para algunos plugins y bibliotecas) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <script src="{% static 'assets/dist/lib/DataTables/datatables.min.js' %}"></script>
+  <!-- <script src="{% static 'assets/dist/lib/DataTables/datatables.min.js' %}"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-2.1.8/b-3.1.2/b-html5-3.1.2/datatables.js"></script>
 
   <!-- Date Range Picker (libreria para reportes) -->
   <script src="{% static 'assets/dist/lib/daterangepicker-master/moment.min.js' %}"></script>
